@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>图书登记界面</title>
+  <script>
+    function changemax(){
+      var data=document.forms["mform"]["bday"].value;
+      var year=data.slice(0,4);
+      var month=data.slice(5,7);
+      var day=data.slice(8,10);
+      var year1=Number(year);
+      var month1=Number(month);
+      var day1=Number(day);
+      var x=new Date();
+      x.setFullYear(year1,month1-1,day1);
+      var today=new Date();
+      if(x>today){
+        alert("输入的日期不能大于当前日期");
+        return false;
+      }else{
+        return true;
+      }
+    }
+  </script>
+</head>
+<style>
+  input[tyep=text],select{
+    width:100%;
+    padding:12px 20px;
+    margin:8px 0;
+    display: inline-block;
+    border: 1px solid #7adf40;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=file]{
+    width: 100%;
+    background-color: aqua;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]{
+    width: 100%;
+    background-color: aqua;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover{
+    background-color: crimson;
+  }
+
+  div{
+    border-radius: 5px;
+    background-color: gold;
+    padding: 20px;
+  }
+</style>
+<body>
+<h2>图书登记界面</h2>
+<div>
+  <form name="mform" action="" onsubmit="return changemax()" >
+    <label for="bname">图书名称</label>
+    <input type="text" id="bname" name="bname" placeholder="book name" required>
+    <label for="aname">作者</label>
+    <input type="text" id="aname" name="aname" placeholder="author" required>
+    <label for="sname">出版社</label>
+    <input type="text" id="sname" name="sname" placeholder="publish" required><br>
+    <label for="data">出版日期</label>
+    <input type="date" id="data" name="bday" required>
+    (出版日期不得晚于当前日期)<br>
+    <label for="numb">库存数量</label>
+    <input type="number" id="numb" name="nname" placeholder="number" min="1" required>
+    （库存数量不得为0）<br>
+    <input type="file" id="pic" name="pict" accept="image/*" required>
+    <input type="submit" value="上传">
+  </form>
+</div>
+</body>
+</html>
