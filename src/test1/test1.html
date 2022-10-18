@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书管理界面</title>
+    <style>
+        div.img{
+            margin:5px;
+            border:1px solid #ccc;
+            float: left;
+            width: 230px;
+        }
+
+        div.img:hover{
+            border: 2px solid #777;
+        }
+
+        div.img img{
+            width:100%;
+            height:50%;
+        }
+
+        div.desc{
+            padding: 15px;
+            text-align: center;
+        }
+
+        input[type=submit]{
+            width: 100%;
+            background-color: aqua;
+            color: black;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover{
+            background-color: crimson;
+        }
+
+        div{
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+<h2>图书管理界面</h2>
+<div class="responsive">
+    <div class="img">
+        <a target="_blank" href="book/1.webp">
+            <img src="book/1.webp" alt="图片" width="500" height="500">
+        </a>
+        <div class="desc">
+            <p>
+                书名：百年孤独<br>
+                作者：马尔克斯<br>
+                定价：10元<br>
+                出版日期：2022年12月2日<br>
+                出版社：未知出版社<br>
+                库存数量：20
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="img">
+        <a target="_blank" href="book/1.webp">
+            <img src="book/2.webp" alt="图片" width="800" height="800">
+        </a>
+        <div class="desc">
+            <p>
+                书名：小王子<br>
+                作者：马尔克斯<br>
+                定价：10元<br>
+                出版日期：2022年12月2日<br>
+                出版社：未知出版社<br>
+                库存数量：10
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="img">
+        <a target="_blank" href="book/1.webp">
+            <img src="book/3.webp" alt="图片" width="800" height="800">
+        </a>
+        <div class="desc">
+            <p>
+                书名：小王子<br>
+                作者：马尔克斯<br>
+                定价：10元<br>
+                出版日期：2022年12月2日<br>
+                出版社：未知出版社<br>
+                库存数量：10
+            </p>
+        </div>
+    </div>
+</div>
+<div>
+    <form action="http://localhost:63342/untitled2/test1/test2.html">
+        <input type="submit" value="登记新图书">
+    </form>
+</div>
+</body>
+</html>
