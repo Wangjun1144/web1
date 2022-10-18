@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>管理员登录界面</title>
+</head>
+<style>
+  input[type=text],select{
+    width:100%;
+    padding:12px 20px;
+    margin:8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=password],select{
+    width:100%;
+    padding:12px 20px;
+    margin:8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit]{
+    width: 100%;
+    background-color: aqua;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover{
+    background-color: crimson;
+  }
+
+  div{
+    border-radius: 5px;
+    background-color: gold;
+    padding: 20px;
+  }
+</style>
+<body>
+<h2>管理员登录界面</h2>
+<div>
+  <form action="http://localhost:63342/untitled2/test1/test1.html">
+    <label for="username">用户名</label>
+    <input type="text" id="username" name="username" placeholder="your name" required>
+    <label for="password">密码</label>
+    <input type="password" id="password" name="password" placeholder="password" required>
+    <input type="submit" value="登录">
+  </form>
+</div>
+</body>
+</html>
